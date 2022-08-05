@@ -1,53 +1,20 @@
-#!/bin/bash
+![image](https://user-images.githubusercontent.com/53065122/183134574-0ea5b2e1-6625-42ed-8b09-9f2009f144e6.png)
 
-total_found=0
+## Scenario
+Welcome to Amazon's Website Security Department! You have been tasked with securing this machine and the Apache 2 server running on it. Absolutely no games or hacking tools are permitted on this machine. Also, we recently fired Charlie Hale, so please remove his account, chale. Lastly, Jeffery Bezos has requested for ICMP pings to be enabled.
 
-score_report="/home/cyber/Desktop/ScoreReport.html"
+## Authorized Services
+Apache2
 
-function update-found
-{
-	#updates vuln found counts in score report
-	
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
-        sed -i "s/id=\"linux_found\".*/id=\"linux_found\">LINUX ($linux_found\/30)<\/button>/g" $score_report
-
-	echo $total_found
-}
-
-function show-vuln()
-{
-	#allows vuln name to be seen in score report
-	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
-	((total_found++))
-	#replaces placeholder name with actual vuln name (obfuscation)
-	sed -i "s/$2/$3/g" $score_report
-	notify-send "Congrats!" "You Gained Points"
-	update-found
-}
-
-function hide-vuln()
-{
-	#hides vuln name from score report
-	sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
-	((total-found--))
-	#replaces placeholder name (people should keep their own notes on the points they've gained)
-	sed -i "s/$2/$3/g" $score_report
-	notify-send "Uh Oh!" "You Lost Points"
-	update-found
-}
-
-function notify-send()
-{
-    #Detect the name of the display in use
-    local display=":$(ls /tmp/.X11-unix/* | sed 's#/tmp/.X11-unix/X##' | head -n 1)"
-
-    #Detect the user using such display
-    local user=$(who | grep '('$display')' | awk '{print $1}' | head -n 1)
-
-    #Detect the id of the user
-    local uid=$(id -u $user)
-
-    sudo -u $user DISPLAY=$display DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus notify-send "$@"
-}
-
-update-found
+## Authorized Accounts
+### Admins
+bezos:richwhiteman  
+elon:<3JeffryB3z0$  
+morill:S3cr3t1yRunsTheW0rld  
+### Standard Users  
+employee1  
+employee2  
+employee3  
+employee4  
+employee5
+jeremiah  
