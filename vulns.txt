@@ -1,0 +1,18 @@
+  - Apache runs on correct port
+  - Server tokens set to prod
+  - Trace enabled set to off
+  - Apache does not run as root
+  - Etags are hidden
+  - XSS protection enabled
+  - Correct timeout length set
+  - Apache security modules installed
+  - Indexing disabled
+  - SSL disabled
+  - ... folder that links to /
+  - Automatically download and install security updates :done:
+  - Netcat is removed :done:
+  - Samba is removed :done:
+  - Removed unauthorized user chale
+  - Correct file permnissions set on /etc/shadow :done:
+  - Stickybit set on /var/tmp :done:
+  - Correct owner on /etc/fstab
