@@ -1,11 +1,8 @@
   - Apache runs on correct port
   - Server tokens set to prod
   - Trace enabled set to off
-  - Apache does not run as root
-  - Etags are hidden
   - XSS protection enabled
-  - Correct timeout length set
-  - Apache security modules installed
+  - ICMP pings enabled
   - Indexing disabled
   - SSL disabled
   - ... folder that links to /
