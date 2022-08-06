@@ -4,12 +4,10 @@
   - XSS protection enabled
   - ICMP pings enabled
   - Indexing disabled
-  - SSL disabled
   - ... folder that links to /
-  - Automatically download and install security updates :done:
-  - Netcat is removed :done:
-  - Samba is removed :done:
+  - Netcat is removed
+  - Samba is removed
   - Removed unauthorized user chale
-  - Correct file permnissions set on /etc/shadow :done:
-  - Stickybit set on /var/tmp :done:
+  - Correct file permnissions set on /etc/shadow
+  - Stickybit set on /var/tmp 
   - Correct owner on /etc/fstab
