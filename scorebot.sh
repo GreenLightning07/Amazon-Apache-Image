@@ -181,7 +181,7 @@ do
                 hide-vuln '13' "Correct owner of \/etc\/fstab +5" "Vuln13;" 5
         fi
 
-	if ( cat /home/bezos/Desktop/Forensics/Forensics1 | grep "5560" ); then
+	if ( cat /home/bezos/Desktop/Forensics/Forensics1 | grep "994" ); then
                 if ( cat $score_report | grep 'id="14"' | grep "display:none" ); then
                         show-vuln '14' "Vuln14;" "Forensics1 correct +5" 5
                 fi
